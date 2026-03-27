@@ -62,15 +62,6 @@ function Logo({ size = 48, light = false }) {
           letterSpacing: s * 0.03,
           textTransform: "uppercase",
         }}>Construction Services</span>
-        <a href="tel:2392058888" style={{
-          fontFamily: "'Montserrat', sans-serif",
-          fontSize: s * 0.24,
-          fontWeight: 700,
-          color: COLORS.gold,
-          letterSpacing: s * 0.04,
-          textDecoration: "none",
-          textAlign: "center",
-        }}>239-205-8888</a>
       </div>
     </div>
   );
@@ -284,6 +275,11 @@ function PageHero({ title, subtitle, bg = COLORS.navy }) {
           fontFamily: "'Montserrat', sans-serif", fontSize: 17, fontWeight: 400,
           color: "rgba(255,255,255,0.8)", marginTop: 16, letterSpacing: 1,
         }}>{subtitle}</p>}
+        <a href="tel:2392058888" style={{
+          fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(24px, 4vw, 36px)", fontWeight: 800,
+          color: COLORS.gold, textDecoration: "none", letterSpacing: 3,
+          display: "block", marginTop: 20,
+        }}>239-205-8888</a>
       </div>
     </div>
   );
@@ -469,6 +465,11 @@ function HomePage({ setPage }) {
             <GoldButton large onClick={() => setPage("request-service")}>Request a Consultation</GoldButton>
             <GoldButton large outline onClick={() => setPage("about")}>Our Story</GoldButton>
           </div>
+          <a href="tel:2392058888" style={{
+            fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(28px, 5vw, 42px)", fontWeight: 800,
+            color: COLORS.gold, textDecoration: "none", letterSpacing: 3,
+            display: "block", marginTop: 40, textAlign: "center",
+          }}>239-205-8888</a>
           <div style={{ display: "flex", gap: 24, justifyContent: "center", marginTop: 60, flexWrap: "wrap" }}>
             {LICENSES.map(l => (
               <LicenseBadge key={l.number} license={l} />
