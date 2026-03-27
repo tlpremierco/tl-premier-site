@@ -62,6 +62,15 @@ function Logo({ size = 48, light = false }) {
           letterSpacing: s * 0.03,
           textTransform: "uppercase",
         }}>Construction Services</span>
+        <a href="tel:2392058888" style={{
+          fontFamily: "'Montserrat', sans-serif",
+          fontSize: s * 0.24,
+          fontWeight: 700,
+          color: COLORS.gold,
+          letterSpacing: s * 0.04,
+          textDecoration: "none",
+          textAlign: "center",
+        }}>239-205-8888</a>
       </div>
     </div>
   );
@@ -125,16 +134,6 @@ function Navigation({ currentPage, setPage }) {
                 onMouseLeave={e => { if (currentPage !== item.id) { e.target.style.color = COLORS.white; } }}
               >{item.label}</button>
             ))}
-            <a href="tel:2392058888" style={{
-              fontFamily: "'Montserrat', sans-serif", fontSize: 20, fontWeight: 800,
-              color: COLORS.gold, textDecoration: "none", letterSpacing: 1.5,
-              padding: "8px 20px", border: `2px solid ${COLORS.gold}`,
-              whiteSpace: "nowrap", marginLeft: 8,
-              transition: "all 0.3s",
-            }}
-              onMouseEnter={e => { e.target.style.background = COLORS.gold; e.target.style.color = COLORS.navy; }}
-              onMouseLeave={e => { e.target.style.background = "transparent"; e.target.style.color = COLORS.gold; }}
-            >239-205-8888</a>
           </div>
           {/* Mobile Menu Button */}
           <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)} style={{
@@ -165,12 +164,6 @@ function Navigation({ currentPage, setPage }) {
               padding: "8px 0",
             }}>{item.label}</button>
           ))}
-          <a href="tel:2392058888" style={{
-            fontFamily: "'Montserrat', sans-serif", fontSize: 24, fontWeight: 800,
-            color: COLORS.gold, textDecoration: "none", letterSpacing: 2,
-            padding: "12px 28px", border: `2px solid ${COLORS.gold}`,
-            marginTop: 16,
-          }}>239-205-8888</a>
         </div>
       )}
 
@@ -582,7 +575,8 @@ function AboutPage({ setPage }) {
               background: `linear-gradient(160deg, ${COLORS.navy} 0%, ${COLORS.navyLight} 100%)`,
               padding: "14px 12px", textAlign: "center",
             }}>
-              <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 20, fontWeight: 700, color: COLORS.gold, margin: "0 0 6px" }}>20+ Years</p>
+              <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 20, fontWeight: 700, color: COLORS.gold, margin: "0 0 2px" }}>20+ Years</p>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: "0 0 6px" }}>Experience</p>
               <div style={{ width: 24, height: 1, background: `${COLORS.gold}44`, margin: "0 auto 8px" }} />
               {LICENSES.map(l => (
                 <p key={l.number} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 7, fontWeight: 600, color: "rgba(255,255,255,0.6)", margin: "3px 0", letterSpacing: 0.5 }}>{l.type}</p>
