@@ -86,11 +86,9 @@ function Navigation({ currentPage, setPage }) {
     { id: "general-construction", label: "Construction" },
     { id: "plumbing", label: "Plumbing" },
     { id: "electrical", label: "Electrical" },
-    { id: "property-maintenance", label: "Maintenance" },
     { id: "portfolio", label: "Portfolio" },
     { id: "request-service", label: "Request Service" },
     { id: "careers", label: "Careers" },
-    { id: "payments", label: "Payments" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -296,7 +294,7 @@ function Footer({ setPage }) {
               fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 400,
               color: "rgba(255,255,255,0.7)", lineHeight: 1.8, marginTop: 20,
             }}>
-              Premier construction, plumbing, electrical, and property maintenance services serving Naples' luxury communities and greater Collier County. Licensed, insured, and committed to excellence.
+              Premier construction, plumbing, and electrical services serving Naples' luxury communities and greater Collier County. Licensed, insured, and committed to excellence.
             </p>
           </div>
           <div>
@@ -304,7 +302,7 @@ function Footer({ setPage }) {
               fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700,
               letterSpacing: 3, textTransform: "uppercase", color: COLORS.gold, marginBottom: 20, marginTop: 0,
             }}>Services</h4>
-            {["general-construction", "plumbing", "electrical", "property-maintenance"].map(id => (
+            {["general-construction", "plumbing", "electrical"].map(id => (
               <button key={id} onClick={() => setPage(id)} style={{
                 display: "block", background: "none", border: "none", cursor: "pointer",
                 fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 400,
@@ -317,7 +315,7 @@ function Footer({ setPage }) {
               fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700,
               letterSpacing: 3, textTransform: "uppercase", color: COLORS.gold, marginBottom: 20, marginTop: 0,
             }}>Company</h4>
-            {["about", "portfolio", "request-service", "careers", "payments", "contact"].map(id => (
+            {["about", "portfolio", "request-service", "careers", "contact"].map(id => (
               <button key={id} onClick={() => setPage(id)} style={{
                 display: "block", background: "none", border: "none", cursor: "pointer",
                 fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 400,
@@ -490,7 +488,6 @@ function HomePage({ setPage }) {
             <ServiceCard accent="#D48A2C" icon="🏗" title="General Construction" desc="Custom homes, luxury renovations, commercial build-outs, and water damage restoration. From concept to certificate of occupancy." />
             <ServiceCard accent="#4A8FC4" icon="🔧" title="Plumbing" desc="Full-service residential and commercial plumbing — new construction, whole-home re-pipes, remodel rough-ins, and water treatment systems." />
             <ServiceCard accent="#4CA66B" icon="⚡" title="Electrical" desc="Complete electrical services including panel upgrades, whole-home rewiring, smart home systems, and generator installations." />
-            <ServiceCard icon="🏠" title="Property Maintenance" desc="Annual maintenance programs for luxury homes and commercial properties — inspections, storm prep, and year-round care through one trusted partner." />
           </div>
         </div>
       </div>
@@ -802,57 +799,6 @@ function ElectricalPage({ setPage }) {
 
 
 // ═══════════════════════════════════════════════════════════
-// PAGE: PROPERTY MAINTENANCE
-// ═══════════════════════════════════════════════════════════
-function PropertyMaintenancePage({ setPage }) {
-  return (
-    <div>
-      <PageHero title="Property Maintenance" subtitle="Premium Ongoing Care for Luxury Properties" />
-      <div style={{ padding: "80px 40px", background: "#F7F4EE" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{
-            fontFamily: "'Montserrat', sans-serif", fontSize: 17, fontWeight: 400,
-            color: COLORS.grayDark, lineHeight: 2, maxWidth: 800, marginBottom: 60,
-          }}>
-            <p>TL Premier offers annual maintenance programs designed for luxury homes, estates, and commercial properties. Our licensed team handles everything — structural, plumbing, electrical, and exterior — so your property stays in premier condition year-round through a single, trusted partner.</p>
-          </div>
-
-          <SectionTitle eyebrow="Programs" title="Maintenance Programs" center={false} />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
-            <ServiceCard icon="🏡" title="Annual Home Maintenance Program" desc="Comprehensive yearly maintenance plan covering full-home inspections, plumbing and electrical system checks, HVAC coordination, and preventive care — tailored to your property." />
-            <ServiceCard icon="🌀" title="Hurricane Prep & Recovery Program" desc="Seasonal storm readiness including shutter systems, structural inspections, drainage review, post-storm assessment, and priority emergency restoration." />
-            <ServiceCard icon="🔑" title="Seasonal Estate Watch" desc="Full-service care for seasonal residents — home opening and closing, climate system management, vendor coordination, and detailed condition reporting." />
-            <ServiceCard icon="🏢" title="Commercial Property Programs" desc="Ongoing maintenance contracts for office buildings, retail spaces, and multi-unit properties — scheduled inspections, code compliance, and system upkeep." />
-          </div>
-
-          <div style={{
-            marginTop: 60, padding: "48px",
-            background: `linear-gradient(135deg, ${COLORS.navy}, ${COLORS.navyLight})`,
-            borderLeft: `4px solid ${COLORS.gold}`,
-          }}>
-            <h3 style={{
-              fontFamily: "'Lora', Georgia, serif", fontSize: 28, fontWeight: 700,
-              color: COLORS.gold, margin: "0 0 12px",
-            }}>The TL Premier Advantage</h3>
-            <p style={{
-              fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 400,
-              color: "rgba(255,255,255,0.85)", lineHeight: 1.8, margin: 0,
-            }}>
-              Because we hold our own GC, plumbing, and electrical licenses, every aspect of your property's care is handled in-house — no subcontractor delays, no finger-pointing, and one standard of quality across every trade.
-            </p>
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 60 }}>
-            <GoldButton large onClick={() => setPage("request-service")}>Request a Maintenance Consultation</GoldButton>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-
-// ═══════════════════════════════════════════════════════════
 // PAGE: PORTFOLIO
 // ═══════════════════════════════════════════════════════════
 function PortfolioPage({ setPage }) {
@@ -1021,9 +967,9 @@ function RequestServicePage() {
         <FormInput label="Property Address" value={form.address} onChange={update("address")} />
         <div className="form-row">
           <FormInput label="Service Category" value={form.serviceType} onChange={update("serviceType")}
-            options={["General Construction", "Plumbing", "Electrical", "Property Maintenance", "Multiple Services"]} required />
+            options={["General Construction", "Plumbing", "Electrical", "Multiple Services"]} required />
           <FormInput label="Project Type" value={form.projectType} onChange={update("projectType")}
-            options={["New Construction", "Renovation / Remodel", "Maintenance Program", "Consultation Only"]} />
+            options={["New Construction", "Renovation / Remodel", "Consultation Only"]} />
         </div>
         <div className="form-row">
           <FormInput label="Estimated Budget" value={form.budget} onChange={update("budget")}
@@ -1174,85 +1120,6 @@ function CareersPage() {
 
 
 // ═══════════════════════════════════════════════════════════
-// PAGE: PAYMENTS
-// ═══════════════════════════════════════════════════════════
-function PaymentsPage() {
-  const [invoiceId, setInvoiceId] = useState("");
-  const [amount, setAmount] = useState("");
-
-  return (
-    <div>
-      <PageHero title="Make a Payment" subtitle="Secure & convenient payment options" />
-      <div style={{ padding: "80px 40px", maxWidth: 800, margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 40 }}>
-          {/* Online Payment */}
-          <div style={{ padding: "40px 36px", background: COLORS.offWhite, border: `1px solid ${COLORS.grayLight}33` }}>
-            <div style={{ fontSize: 36, marginBottom: 16 }}>💳</div>
-            <h3 style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 24, fontWeight: 600, color: COLORS.navy, margin: "0 0 16px" }}>
-              Online Payment
-            </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 300, color: COLORS.gray, lineHeight: 1.8, marginBottom: 24 }}>
-              Pay your invoice securely online with a credit card, debit card, or ACH bank transfer.
-            </p>
-            <FormInput label="Invoice Number" value={invoiceId} onChange={setInvoiceId} />
-            <FormInput label="Payment Amount" type="number" value={amount} onChange={setAmount} />
-            <GoldButton onClick={() => alert("Payment portal integration coming soon. Please contact us for payment arrangements.")}>
-              Pay Now
-            </GoldButton>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, color: COLORS.gray, marginTop: 12 }}>
-              Secured with 256-bit SSL encryption
-            </p>
-          </div>
-
-          {/* Other Methods */}
-          <div>
-            <h3 style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 24, fontWeight: 600, color: COLORS.navy, margin: "0 0 24px" }}>
-              Other Payment Methods
-            </h3>
-            {[
-              { icon: "🏦", title: "Bank Transfer / ACH", desc: "Contact us for our bank details for direct wire or ACH transfers." },
-              { icon: "📧", title: "Zelle", desc: `Send payments via Zelle to ${EMAIL}` },
-              { icon: "✉️", title: "Check by Mail", desc: "Mail checks payable to TL Premier Construction Services. Contact us for mailing address." },
-              { icon: "🤝", title: "In-Person", desc: "We accept checks and cards at on-site meetings or our office." },
-            ].map(m => (
-              <div key={m.title} style={{
-                display: "flex", gap: 16, padding: "20px 0",
-                borderBottom: `1px solid ${COLORS.grayLight}33`,
-              }}>
-                <span style={{ fontSize: 24 }}>{m.icon}</span>
-                <div>
-                  <h4 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, color: COLORS.navy, margin: "0 0 4px" }}>{m.title}</h4>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 300, color: COLORS.gray, margin: 0, lineHeight: 1.6 }}>{m.desc}</p>
-                </div>
-              </div>
-            ))}
-
-            <div style={{
-              marginTop: 32, padding: "24px", background: `${COLORS.gold}10`,
-              borderLeft: `3px solid ${COLORS.gold}`,
-            }}>
-              <h4 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold, margin: "0 0 8px" }}>
-                Payment Terms
-              </h4>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 300, color: COLORS.grayDark, lineHeight: 1.7, margin: 0 }}>
-                Standard payment schedules are outlined in your contract. Typical terms include a deposit at signing, progress payments at milestones, and final payment upon completion and inspection approval.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div style={{ textAlign: "center", marginTop: 60 }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, color: COLORS.gray }}>
-            Questions about billing? Call us at <strong style={{ color: COLORS.navy }}>{PHONE}</strong> or email <strong style={{ color: COLORS.navy }}>{EMAIL}</strong>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-
-// ═══════════════════════════════════════════════════════════
 // PAGE: CONTACT
 // ═══════════════════════════════════════════════════════════
 function ContactPage() {
@@ -1375,11 +1242,9 @@ export default function App() {
       case "general-construction": return <GeneralConstructionPage setPage={navigate} />;
       case "plumbing": return <PlumbingPage setPage={navigate} />;
       case "electrical": return <ElectricalPage setPage={navigate} />;
-      case "property-maintenance": return <PropertyMaintenancePage setPage={navigate} />;
       case "portfolio": return <PortfolioPage setPage={navigate} />;
       case "request-service": return <RequestServicePage />;
       case "careers": return <CareersPage />;
-      case "payments": return <PaymentsPage />;
       case "contact": return <ContactPage />;
       default: return <HomePage setPage={navigate} />;
     }
