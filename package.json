@@ -1,7 +1,7 @@
 {
-  "name": "tl-premier-site",
-  "version": "1.0.0",
+  "name": "tl-premier-construction",
   "private": true,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
