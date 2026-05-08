@@ -81,7 +81,7 @@ function Navigation({ currentPage, setPage }) {
       }}>
         <div style={{ maxWidth: 1600, margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div onClick={() => setPage("home")} style={{ cursor: "pointer" }}>
-            <Logo size={scrolled ? 38 : 44} light />
+            <Logo size={scrolled ? 100 : 140} light />
           </div>
           {/* Desktop Nav */}
           <div style={{ display: "flex", gap: 20, alignItems: "center", flexWrap: "wrap", justifyContent: "flex-end" }} className="desktop-nav">
@@ -266,7 +266,7 @@ function Footer({ setPage }) {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 48, marginBottom: 60 }}>
           <div>
-            <Logo size={44} light />
+            <Logo size={140} light />
             <p style={{
               fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 400,
               color: "rgba(255,255,255,0.7)", lineHeight: 1.8, marginTop: 20,
