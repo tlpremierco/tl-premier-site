@@ -79,7 +79,7 @@ function Navigation({ currentPage, setPage }) {
         transition: "all 0.4s ease",
         padding: scrolled ? "16px 0" : "24px 0",
       }}>
-        <div style={{ maxWidth: 1600, margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div onClick={() => setPage("home")} style={{ cursor: "pointer" }}>
             <Logo size={scrolled ? 100 : 140} light />
           </div>
