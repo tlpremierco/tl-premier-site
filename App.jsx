@@ -22,7 +22,7 @@ const COLORS = {
 };
 
 const PHONE = "239-205-8888";
-const EMAIL = "info@tlpremierco.com";
+const EMAIL = "Nathan@tlpremierco.com";
 const ADDRESS = "Naples, FL";
 const DOMAIN = "tlpremierco.com";
 
