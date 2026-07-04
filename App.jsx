@@ -428,7 +428,7 @@ function HomePage({ setPage }) {
             fontFamily: "'Lora', Georgia, serif",
             fontSize: "clamp(40px, 6.5vw, 74px)", fontWeight: 700,
             color: COLORS.white, lineHeight: 1.1, margin: "0 0 24px",
-          }}>Building Excellence.<br />Delivering Distinction.</h1>
+          }}>One Call.<br />Complete Solutions.<br />Total Peace of Mind.</h1>
           <p style={{
             fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 400,
             color: "rgba(255,255,255,0.85)", lineHeight: 1.8, maxWidth: 580, margin: "0 auto 48px",
