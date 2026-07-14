@@ -454,6 +454,49 @@ function HomePage({ setPage }) {
         </div>
       </div>
 
+      {/* Trust Section - New to Naples */}
+      <div style={{ padding: "90px 40px", background: "#FFFFFF" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+          <div style={{ width: 50, height: 2, background: COLORS.gold, margin: "0 auto 20px" }} />
+          <h2 style={{
+            fontFamily: "'Lora', Georgia, serif", fontSize: "clamp(30px, 4.5vw, 46px)", fontWeight: 700,
+            color: COLORS.navy, margin: "0 0 24px",
+          }}>New to Naples. Trusted for 20 Years.</h2>
+          <p style={{
+            fontFamily: "'Montserrat', sans-serif", fontSize: 17, fontWeight: 400,
+            color: COLORS.gray, lineHeight: 2, maxWidth: 720, margin: "0 auto 12px",
+          }}>
+            We're new to Southwest Florida — but not to the trades. Nathan spent two decades building one of San Diego's most respected construction and plumbing companies, earning a reputation for craftsmanship, honesty, and finishing what he starts.
+          </p>
+          <p style={{
+            fontFamily: "'Montserrat', sans-serif", fontSize: 17, fontWeight: 600,
+            color: COLORS.navy, lineHeight: 2, maxWidth: 720, margin: "0 auto 36px",
+          }}>
+            Don't take our word for it — our California reviews are public, verified, and written by real clients. That same standard of work now calls Naples home.
+          </p>
+          <div style={{ display: "flex", gap: 20, justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="https://www.yelp.com/biz/tl-premier-plumbing-san-diego" target="_blank" rel="noopener noreferrer" style={{
+              display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
+              padding: "24px 36px", background: COLORS.white, textDecoration: "none",
+              border: `2px solid ${COLORS.gold}`, minWidth: 260,
+            }}>
+              <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 32, fontWeight: 700, color: COLORS.navy }}>169 Reviews</span>
+              <span style={{ color: COLORS.gold, fontSize: 18, letterSpacing: 2 }}>★★★★★</span>
+              <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 800, letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold }}>TL Premier Plumbing on Yelp →</span>
+            </a>
+            <a href="https://www.yelp.com/biz/tl-premier-construction-inc-san-diego" target="_blank" rel="noopener noreferrer" style={{
+              display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
+              padding: "24px 36px", background: COLORS.white, textDecoration: "none",
+              border: `2px solid ${COLORS.gold}`, minWidth: 260,
+            }}>
+              <span style={{ fontFamily: "'Lora', Georgia, serif", fontSize: 32, fontWeight: 700, color: COLORS.navy }}>17 Reviews</span>
+              <span style={{ color: COLORS.gold, fontSize: 18, letterSpacing: 2 }}>★★★★★</span>
+              <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 800, letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold }}>TL Premier Construction on Yelp →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Services Overview */}
       <div style={{ padding: "100px 40px", background: COLORS.offWhite }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -661,6 +704,20 @@ function AboutPage({ setPage }) {
                 <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: COLORS.navy }}>{b.label}</span>
               </div>
             ))}
+          </div>
+
+          {/* Yelp Reviews */}
+          <div style={{ display: "flex", justifyContent: "center", gap: 16, marginTop: 24, flexWrap: "wrap" }}>
+            <a href="https://www.yelp.com/biz/tl-premier-plumbing-san-diego" target="_blank" rel="noopener noreferrer" style={{
+              fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 800, letterSpacing: 1.5,
+              textTransform: "uppercase", color: COLORS.gold, textDecoration: "none",
+              padding: "14px 28px", border: `2px solid ${COLORS.gold}`,
+            }}>★ 169 Plumbing Reviews on Yelp</a>
+            <a href="https://www.yelp.com/biz/tl-premier-construction-inc-san-diego" target="_blank" rel="noopener noreferrer" style={{
+              fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 800, letterSpacing: 1.5,
+              textTransform: "uppercase", color: COLORS.gold, textDecoration: "none",
+              padding: "14px 28px", border: `2px solid ${COLORS.gold}`,
+            }}>★ 17 Construction Reviews on Yelp</a>
           </div>
         </div>
       </div>
