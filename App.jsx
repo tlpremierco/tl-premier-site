@@ -402,8 +402,8 @@ function HomePage({ setPage }) {
       <div style={{
         minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center",
         background: `linear-gradient(160deg, ${COLORS.navyDark} 0%, ${COLORS.navy} 40%, ${COLORS.navyLight} 100%)`,
-        position: "relative", overflow: "hidden", padding: "120px 40px 80px",
-      }}>
+        position: "relative", overflow: "hidden", padding: "120px 24px 80px",
+      }} className="hero-section">
         <div style={{
           position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.03,
           backgroundImage: `repeating-linear-gradient(0deg, ${COLORS.gold} 0, ${COLORS.gold} 1px, transparent 1px, transparent 60px),
@@ -429,6 +429,10 @@ function HomePage({ setPage }) {
             fontSize: "clamp(40px, 6.5vw, 74px)", fontWeight: 700,
             color: COLORS.white, lineHeight: 1.1, margin: "0 0 24px",
           }}>One Call.<br />Complete Solutions.<br />Total Peace of Mind.</h1>
+          <p className="hero-subline" style={{
+            fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(13px, 2vw, 19px)", fontWeight: 700,
+            letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold, margin: "0 0 28px",
+          }}>Uncompromised Quality. Every Trade.</p>
           <p style={{
             fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 400,
             color: "rgba(255,255,255,0.85)", lineHeight: 1.8, maxWidth: 580, margin: "0 auto 48px",
@@ -436,7 +440,7 @@ function HomePage({ setPage }) {
             Licensed general contractor, plumber, and electrician serving Naples' most
             prestigious communities and the greater Collier County area.
           </p>
-          <div style={{ display: "flex", gap: 20, justifyContent: "center", flexWrap: "wrap" }}>
+          <div className="hero-buttons" style={{ display: "flex", gap: 20, justifyContent: "center", flexWrap: "wrap" }}>
             <GoldButton large onClick={() => setPage("request-service")}>Request a Consultation</GoldButton>
             <GoldButton large outline onClick={() => setPage("about")}>Our Story</GoldButton>
           </div>
@@ -1324,12 +1328,21 @@ export default function App() {
           
           /* Service areas stack on mobile */
           .service-areas { grid-template-columns: 1fr 1fr !important; }
+
+          /* Hero buttons full-width and easy to tap */
+          .hero-buttons { flex-direction: column !important; width: 100%; }
+          .hero-buttons button { width: 100% !important; }
         }
 
         /* Padding and sizing on phones */
         @media (max-width: 600px) {
           footer { padding: 48px 20px 32px !important; }
           nav > div { padding: 0 16px !important; }
+          /* Tighter hero on phones */
+          .hero-section { padding: 100px 20px 60px !important; }
+          .hero-subline { letter-spacing: 1px !important; }
+          /* Service areas single column on small phones */
+          .service-areas { grid-template-columns: 1fr !important; }
         }
       `}</style>
       <Navigation currentPage={page} setPage={navigate} />
