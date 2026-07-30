@@ -426,19 +426,22 @@ function HomePage({ setPage }) {
           }}>Naples, Florida</p>
           <h1 style={{
             fontFamily: "'Lora', Georgia, serif",
-            fontSize: "clamp(40px, 6.5vw, 74px)", fontWeight: 700,
-            color: COLORS.white, lineHeight: 1.1, margin: "0 0 24px",
-          }}>One Call.<br />Complete Solutions.<br />Total Peace of Mind.</h1>
-          <p className="hero-subline" style={{
-            fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(13px, 2vw, 19px)", fontWeight: 700,
-            letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold, margin: "0 0 28px",
-          }}>Uncompromised Quality. Every Trade.</p>
+            fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 700,
+            color: COLORS.white, lineHeight: 1.15, margin: "0 0 20px",
+          }}>Naples General Contractor,<br />Plumbing &amp; Electrical Services</h1>
           <p style={{
-            fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 400,
-            color: "rgba(255,255,255,0.85)", lineHeight: 1.8, maxWidth: 580, margin: "0 auto 48px",
+            fontFamily: "'Lora', Georgia, serif", fontSize: "clamp(20px, 3vw, 30px)", fontWeight: 600,
+            fontStyle: "italic", color: COLORS.white, margin: "0 0 20px", lineHeight: 1.3,
+          }}>One Call. Complete Solutions. Total Peace of Mind.</p>
+          <p className="hero-subline" style={{
+            fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.8vw, 16px)", fontWeight: 700,
+            letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold, margin: "0 0 24px",
+          }}>Florida Licensed General Contractor • Plumbing Contractor • Electrical Contractor</p>
+          <p style={{
+            fontFamily: "'Montserrat', sans-serif", fontSize: 17, fontWeight: 400,
+            color: "rgba(255,255,255,0.85)", lineHeight: 1.8, maxWidth: 680, margin: "0 auto 44px",
           }}>
-            Licensed general contractor, plumber, and electrician serving Naples' most
-            prestigious communities and the greater Collier County area.
+            TL Premier Construction Services provides luxury remodeling, custom home construction, electrical services, plumbing, generator installation, panel upgrades, whole-house repipes, and storm damage restoration throughout Naples, Marco Island, Bonita Springs, Estero, and Collier County.
           </p>
           <div className="hero-buttons" style={{ display: "flex", gap: 20, justifyContent: "center", flexWrap: "wrap" }}>
             <GoldButton large onClick={() => setPage("request-service")}>Request a Consultation</GoldButton>
