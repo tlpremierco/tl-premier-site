@@ -81,7 +81,7 @@ function Navigation({ currentPage, setPage }) {
         padding: scrolled ? "16px 0" : "24px 0",
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div onClick={() => setPage("home")} style={{ cursor: "pointer" }}>
+          <div onClick={() => setPage("home")} style={{ cursor: "pointer" }} className="nav-logo">
             <Logo size={scrolled ? 72 : 96} light />
           </div>
           {/* Desktop Nav */}
@@ -1721,8 +1721,10 @@ export default function App() {
         @media (max-width: 600px) {
           footer { padding: 48px 20px 32px !important; }
           nav > div { padding: 0 16px !important; }
-          /* Tighter hero on phones */
-          .hero-section { padding: 90px 18px 50px !important; }
+          /* Shrink the logo on phones so header is shorter */
+          .nav-logo img { height: 56px !important; }
+          /* Push hero content well below the fixed header */
+          .hero-section { padding: 140px 18px 50px !important; }
           .hero-subline { letter-spacing: 1px !important; }
           /* Service areas single column on small phones */
           .service-areas { grid-template-columns: 1fr !important; }
