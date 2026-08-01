@@ -82,16 +82,16 @@ function Navigation({ currentPage, setPage }) {
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div onClick={() => setPage("home")} style={{ cursor: "pointer" }}>
-            <Logo size={scrolled ? 80 : 112} light />
+            <Logo size={scrolled ? 72 : 96} light />
           </div>
           {/* Desktop Nav */}
-          <div style={{ display: "flex", gap: 20, alignItems: "center", flexWrap: "wrap", justifyContent: "flex-end" }} className="desktop-nav">
+          <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "nowrap", justifyContent: "flex-end" }} className="desktop-nav">
             {navItems.filter(n => n.id !== "home").map(item => (
               <button key={item.id} onClick={() => setPage(item.id)} style={{
                 background: "none", border: "none", cursor: "pointer",
-                fontFamily: "'Lora', Georgia, serif", fontSize: 16, fontWeight: 700,
+                fontFamily: "'Lora', Georgia, serif", fontSize: 15, fontWeight: 700,
                 color: currentPage === item.id ? COLORS.gold : COLORS.white,
-                letterSpacing: 0.5,
+                letterSpacing: 0.3,
                 padding: "12px 0", borderBottom: currentPage === item.id ? `4px solid ${COLORS.gold}` : "4px solid transparent",
                 transition: "all 0.3s",
                 opacity: 1,
@@ -135,7 +135,7 @@ function Navigation({ currentPage, setPage }) {
       )}
 
       <style>{`
-        @media (max-width: 1400px) {
+        @media (max-width: 1500px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
         }
