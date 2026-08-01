@@ -423,31 +423,38 @@ function HomePage({ setPage }) {
           <div style={{ width: 60, height: 2, background: COLORS.gold, margin: "0 auto 32px" }} />
           <p style={{
             fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700,
-            letterSpacing: 5, textTransform: "uppercase", color: COLORS.gold, marginBottom: 28,
+            letterSpacing: 5, textTransform: "uppercase", color: COLORS.gold, marginBottom: 32,
           }}>Naples, Florida</p>
+
+          {/* Licenses - one line with gold dividers */}
+          <div style={{ margin: "0 auto 40px", display: "flex", alignItems: "center", gap: 18, justifyContent: "center", flexWrap: "wrap" }}>
+            <span style={{ width: 40, height: 1.5, background: COLORS.gold, display: "block" }} />
+            <span style={{
+              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.6vw, 17px)", fontWeight: 700,
+              letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold,
+            }}>General Contractor</span>
+            <span style={{ width: 8, height: 8, background: COLORS.gold, borderRadius: "50%", display: "block" }} />
+            <span style={{
+              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.6vw, 17px)", fontWeight: 700,
+              letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold,
+            }}>Plumbing Contractor</span>
+            <span style={{ width: 8, height: 8, background: COLORS.gold, borderRadius: "50%", display: "block" }} />
+            <span style={{
+              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.6vw, 17px)", fontWeight: 700,
+              letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold,
+            }}>Electrical Contractor</span>
+            <span style={{ width: 40, height: 1.5, background: COLORS.gold, display: "block" }} />
+          </div>
+
           <h1 style={{
             fontFamily: "'Lora', Georgia, serif",
-            fontSize: "clamp(38px, 6vw, 68px)", fontWeight: 700,
-            color: COLORS.white, lineHeight: 1.1, margin: "0 0 12px",
+            fontSize: "clamp(30px, 4.5vw, 48px)", fontWeight: 700,
+            color: COLORS.white, lineHeight: 1.15, margin: "0 0 10px",
           }}>Uncompromised Quality.</h1>
           <p style={{
-            fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(15px, 2.4vw, 22px)", fontWeight: 600,
-            letterSpacing: 4, textTransform: "uppercase", color: COLORS.gold, margin: "0 0 44px",
+            fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 2vw, 20px)", fontWeight: 600,
+            letterSpacing: 4, textTransform: "uppercase", color: COLORS.white, margin: "0 0 44px",
           }}>Peerless Service</p>
-
-          {/* Licenses - stacked with gold dividers */}
-          <div style={{ margin: "0 auto 44px", display: "flex", flexDirection: "column", gap: 16, alignItems: "center" }}>
-            {["General Contractor", "Plumbing Contractor", "Electrical Contractor"].map(lic => (
-              <div key={lic} style={{ display: "flex", alignItems: "center", gap: 16, justifyContent: "center" }}>
-                <span style={{ width: "clamp(24px, 6vw, 56px)", height: 1.5, background: COLORS.gold, display: "block" }} />
-                <span style={{
-                  fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 2.2vw, 20px)", fontWeight: 700,
-                  letterSpacing: 3, textTransform: "uppercase", color: COLORS.gold, whiteSpace: "nowrap",
-                }}>{lic}</span>
-                <span style={{ width: "clamp(24px, 6vw, 56px)", height: 1.5, background: COLORS.gold, display: "block" }} />
-              </div>
-            ))}
-          </div>
 
           <div className="hero-buttons" style={{ display: "flex", gap: 20, justifyContent: "center", flexWrap: "wrap" }}>
             <GoldButton large onClick={() => setPage("request-service")}>Request a Consultation</GoldButton>
