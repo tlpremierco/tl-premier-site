@@ -444,7 +444,7 @@ function HomePage({ setPage }) {
               fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(13px, 2vw, 18px)", fontWeight: 800,
               letterSpacing: 2, textTransform: "uppercase", color: COLORS.white, margin: 0, lineHeight: 1.6,
             }}>
-              Florida Licensed <span style={{ color: COLORS.gold }}>General Contractor</span> • <span style={{ color: COLORS.gold }}>Plumbing Contractor</span> • <span style={{ color: COLORS.gold }}>Electrical Contractor</span>
+              <span style={{ color: COLORS.gold }}>General Contractor</span> • <span style={{ color: COLORS.gold }}>Plumbing Contractor</span> • <span style={{ color: COLORS.gold }}>Electrical Contractor</span>
             </p>
           </div>
 
