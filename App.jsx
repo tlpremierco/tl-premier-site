@@ -410,18 +410,18 @@ function HomePage({ setPage }) {
           backgroundImage: `repeating-linear-gradient(0deg, ${COLORS.gold} 0, ${COLORS.gold} 1px, transparent 1px, transparent 60px),
             repeating-linear-gradient(90deg, ${COLORS.gold} 0, ${COLORS.gold} 1px, transparent 1px, transparent 60px)`,
         }} />
-        <div style={{
+        <div className="hero-decor-circle" style={{
           position: "absolute", top: "10%", right: "-5%", width: 500, height: 500,
           border: `1px solid ${COLORS.gold}15`, borderRadius: "50%",
         }} />
-        <div style={{
+        <div className="hero-decor-circle" style={{
           position: "absolute", bottom: "5%", left: "-8%", width: 600, height: 600,
           border: `1px solid ${COLORS.gold}10`, borderRadius: "50%",
         }} />
 
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: 820 }}>
           <div style={{ width: 60, height: 2, background: COLORS.gold, margin: "0 auto 32px" }} />
-          <p style={{
+          <p className="hero-eyebrow" style={{
             fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700,
             letterSpacing: 5, textTransform: "uppercase", color: COLORS.gold, marginBottom: 32,
           }}>Naples, Florida</p>
@@ -1722,16 +1722,22 @@ export default function App() {
           footer { padding: 48px 20px 32px !important; }
           nav > div { padding: 0 16px !important; }
           /* Tighter hero on phones */
-          .hero-section { padding: 100px 20px 60px !important; }
+          .hero-section { padding: 90px 18px 50px !important; }
           .hero-subline { letter-spacing: 1px !important; }
           /* Service areas single column on small phones */
           .service-areas { grid-template-columns: 1fr !important; }
+          /* Naples Florida eyebrow - reduce letter spacing so it doesn't overflow */
+          .hero-eyebrow { letter-spacing: 3px !important; font-size: 12px !important; }
+          /* License lines a touch bigger when stacked */
+          .hero-licenses span { font-size: 14px !important; }
         }
 
         /* Prevent any horizontal overflow site-wide on mobile */
         @media (max-width: 768px) {
           html, body { overflow-x: hidden !important; max-width: 100vw !important; }
           img { max-width: 100% !important; height: auto !important; }
+          /* Hide the big decorative circles that can overflow on phones */
+          .hero-decor-circle { display: none !important; }
         }
       `}</style>
       <Navigation currentPage={page} setPage={navigate} />
