@@ -80,9 +80,9 @@ function Navigation({ currentPage, setPage }) {
         transition: "all 0.4s ease",
         padding: scrolled ? "16px 0" : "24px 0",
       }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div className="nav-inner" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div onClick={() => setPage("home")} style={{ cursor: "pointer" }} className="nav-logo">
-            <Logo size={scrolled ? 72 : 96} light />
+            <Logo size={scrolled ? 80 : 108} light />
           </div>
           {/* Desktop Nav */}
           <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "nowrap", justifyContent: "flex-end" }} className="desktop-nav">
@@ -1722,9 +1722,13 @@ export default function App() {
           footer { padding: 48px 20px 32px !important; }
           nav > div { padding: 0 16px !important; }
           /* Shrink the logo on phones so header is shorter */
-          .nav-logo img { height: 56px !important; }
+          .nav-logo img { height: 72px !important; }
+          /* Center logo on mobile, hamburger absolute right */
+          .nav-inner { position: relative !important; justify-content: center !important; }
+          .nav-logo { display: flex !important; justify-content: center !important; }
+          .mobile-menu-btn { position: absolute !important; right: 8px !important; top: 50% !important; transform: translateY(-50%) !important; }
           /* Push hero content well below the fixed header */
-          .hero-section { padding: 140px 18px 50px !important; }
+          .hero-section { padding: 150px 18px 50px !important; }
           .hero-subline { letter-spacing: 1px !important; }
           /* Service areas single column on small phones */
           .service-areas { grid-template-columns: 1fr !important; }
