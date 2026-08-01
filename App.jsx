@@ -1722,13 +1722,13 @@ export default function App() {
           footer { padding: 48px 20px 32px !important; }
           nav > div { padding: 0 16px !important; }
           /* Shrink the logo on phones so header is shorter */
-          .nav-logo img { height: 72px !important; }
+          .nav-logo img { height: 96px !important; }
           /* Center logo on mobile, hamburger absolute right */
           .nav-inner { position: relative !important; justify-content: center !important; }
           .nav-logo { display: flex !important; justify-content: center !important; }
           .mobile-menu-btn { position: absolute !important; right: 8px !important; top: 50% !important; transform: translateY(-50%) !important; }
           /* Push hero content well below the fixed header */
-          .hero-section { padding: 150px 18px 50px !important; }
+          .hero-section { padding: 170px 18px 50px !important; }
           .hero-subline { letter-spacing: 1px !important; }
           /* Service areas single column on small phones */
           .service-areas { grid-template-columns: 1fr !important; }
