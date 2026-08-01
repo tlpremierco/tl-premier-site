@@ -427,17 +427,17 @@ function HomePage({ setPage }) {
           }}>Naples, Florida</p>
 
           {/* Licenses - one line, dots between */}
-          <div style={{ margin: "0 auto 40px", display: "flex", alignItems: "center", gap: 14, justifyContent: "center", flexWrap: "nowrap" }}>
+          <div className="hero-licenses" style={{ margin: "0 auto 40px", display: "flex", alignItems: "center", gap: 14, justifyContent: "center", flexWrap: "nowrap" }}>
             <span style={{
               fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(10px, 1.4vw, 16px)", fontWeight: 700,
               letterSpacing: 1.5, textTransform: "uppercase", color: COLORS.gold, whiteSpace: "nowrap",
             }}>General Contractor</span>
-            <span style={{ width: 6, height: 6, background: COLORS.gold, borderRadius: "50%", display: "block", flexShrink: 0 }} />
+            <span className="lic-dot" style={{ width: 6, height: 6, background: COLORS.gold, borderRadius: "50%", display: "block", flexShrink: 0 }} />
             <span style={{
               fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(10px, 1.4vw, 16px)", fontWeight: 700,
               letterSpacing: 1.5, textTransform: "uppercase", color: COLORS.gold, whiteSpace: "nowrap",
             }}>Plumbing Contractor</span>
-            <span style={{ width: 6, height: 6, background: COLORS.gold, borderRadius: "50%", display: "block", flexShrink: 0 }} />
+            <span className="lic-dot" style={{ width: 6, height: 6, background: COLORS.gold, borderRadius: "50%", display: "block", flexShrink: 0 }} />
             <span style={{
               fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(10px, 1.4vw, 16px)", fontWeight: 700,
               letterSpacing: 1.5, textTransform: "uppercase", color: COLORS.gold, whiteSpace: "nowrap",
@@ -1711,6 +1711,10 @@ export default function App() {
           /* Hero buttons full-width and easy to tap */
           .hero-buttons { flex-direction: column !important; width: 100%; }
           .hero-buttons button { width: 100% !important; }
+
+          /* Licenses stack vertically on mobile so they fit */
+          .hero-licenses { flex-direction: column !important; gap: 10px !important; }
+          .hero-licenses .lic-dot { display: none !important; }
         }
 
         /* Padding and sizing on phones */
@@ -1722,6 +1726,12 @@ export default function App() {
           .hero-subline { letter-spacing: 1px !important; }
           /* Service areas single column on small phones */
           .service-areas { grid-template-columns: 1fr !important; }
+        }
+
+        /* Prevent any horizontal overflow site-wide on mobile */
+        @media (max-width: 768px) {
+          html, body { overflow-x: hidden !important; max-width: 100vw !important; }
+          img { max-width: 100% !important; height: auto !important; }
         }
       `}</style>
       <Navigation currentPage={page} setPage={navigate} />
