@@ -426,24 +426,22 @@ function HomePage({ setPage }) {
             letterSpacing: 5, textTransform: "uppercase", color: COLORS.gold, marginBottom: 32,
           }}>Naples, Florida</p>
 
-          {/* Licenses - one line with gold dividers */}
-          <div style={{ margin: "0 auto 40px", display: "flex", alignItems: "center", gap: 18, justifyContent: "center", flexWrap: "wrap" }}>
-            <span style={{ width: 40, height: 1.5, background: COLORS.gold, display: "block" }} />
+          {/* Licenses - one line, dots between */}
+          <div style={{ margin: "0 auto 40px", display: "flex", alignItems: "center", gap: 14, justifyContent: "center", flexWrap: "nowrap" }}>
             <span style={{
-              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.6vw, 17px)", fontWeight: 700,
-              letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold,
+              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(10px, 1.4vw, 16px)", fontWeight: 700,
+              letterSpacing: 1.5, textTransform: "uppercase", color: COLORS.gold, whiteSpace: "nowrap",
             }}>General Contractor</span>
-            <span style={{ width: 8, height: 8, background: COLORS.gold, borderRadius: "50%", display: "block" }} />
+            <span style={{ width: 6, height: 6, background: COLORS.gold, borderRadius: "50%", display: "block", flexShrink: 0 }} />
             <span style={{
-              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.6vw, 17px)", fontWeight: 700,
-              letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold,
+              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(10px, 1.4vw, 16px)", fontWeight: 700,
+              letterSpacing: 1.5, textTransform: "uppercase", color: COLORS.gold, whiteSpace: "nowrap",
             }}>Plumbing Contractor</span>
-            <span style={{ width: 8, height: 8, background: COLORS.gold, borderRadius: "50%", display: "block" }} />
+            <span style={{ width: 6, height: 6, background: COLORS.gold, borderRadius: "50%", display: "block", flexShrink: 0 }} />
             <span style={{
-              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.6vw, 17px)", fontWeight: 700,
-              letterSpacing: 2, textTransform: "uppercase", color: COLORS.gold,
+              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(10px, 1.4vw, 16px)", fontWeight: 700,
+              letterSpacing: 1.5, textTransform: "uppercase", color: COLORS.gold, whiteSpace: "nowrap",
             }}>Electrical Contractor</span>
-            <span style={{ width: 40, height: 1.5, background: COLORS.gold, display: "block" }} />
           </div>
 
           <h1 style={{
