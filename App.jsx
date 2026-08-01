@@ -435,17 +435,18 @@ function HomePage({ setPage }) {
             letterSpacing: 4, textTransform: "uppercase", color: COLORS.gold, margin: "0 0 44px",
           }}>Peerless Service</p>
 
-          {/* Licenses - made prominent */}
-          <div style={{
-            display: "inline-block", padding: "24px 40px", margin: "0 auto 44px",
-            border: `2px solid ${COLORS.gold}`, background: "rgba(201,162,75,0.08)",
-          }}>
-            <p style={{
-              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(13px, 2vw, 18px)", fontWeight: 800,
-              letterSpacing: 2, textTransform: "uppercase", color: COLORS.white, margin: 0, lineHeight: 1.6,
-            }}>
-              <span style={{ color: COLORS.gold }}>General Contractor</span> • <span style={{ color: COLORS.gold }}>Plumbing Contractor</span> • <span style={{ color: COLORS.gold }}>Electrical Contractor</span>
-            </p>
+          {/* Licenses - stacked with gold dividers */}
+          <div style={{ margin: "0 auto 44px", display: "flex", flexDirection: "column", gap: 16, alignItems: "center" }}>
+            {["General Contractor", "Plumbing Contractor", "Electrical Contractor"].map(lic => (
+              <div key={lic} style={{ display: "flex", alignItems: "center", gap: 16, justifyContent: "center" }}>
+                <span style={{ width: "clamp(24px, 6vw, 56px)", height: 1.5, background: COLORS.gold, display: "block" }} />
+                <span style={{
+                  fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 2.2vw, 20px)", fontWeight: 700,
+                  letterSpacing: 3, textTransform: "uppercase", color: COLORS.gold, whiteSpace: "nowrap",
+                }}>{lic}</span>
+                <span style={{ width: "clamp(24px, 6vw, 56px)", height: 1.5, background: COLORS.gold, display: "block" }} />
+              </div>
+            ))}
           </div>
 
           <div className="hero-buttons" style={{ display: "flex", gap: 20, justifyContent: "center", flexWrap: "wrap" }}>
