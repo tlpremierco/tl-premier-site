@@ -809,7 +809,9 @@ function ServicePage({ title, subtitle, license, services, description, setPage,
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
               {recentWork.map((proj, i) => (
                 <div key={i} style={{ background: COLORS.white, border: `1px solid ${COLORS.gold}33`, borderTop: `4px solid ${COLORS.gold}` }}>
-                  <img src={proj.img} alt={proj.caption} style={{ width: "100%", display: "block" }} />
+                  <div style={{ width: "100%", aspectRatio: "3 / 2", background: "#F0F0F0", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                    <img src={proj.img} alt={proj.caption} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }} />
+                  </div>
                   <p style={{
                     fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600,
                     color: COLORS.navy, lineHeight: 1.6, padding: "20px 24px", margin: 0,
