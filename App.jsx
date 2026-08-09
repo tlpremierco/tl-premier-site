@@ -327,7 +327,7 @@ function Footer({ setPage }) {
               letterSpacing: 3, textTransform: "uppercase", color: COLORS.gold, marginBottom: 20, marginTop: 0,
             }}>Contact</h4>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 700, lineHeight: 2, margin: 0 }}>
-              <span style={{ color: COLORS.gold }}>{PHONE}</span><br /><span style={{ color: COLORS.gold }}>{EMAIL}</span><br /><span style={{ color: COLORS.grayDark, fontWeight: 400 }}>{ADDRESS}</span>
+              <span style={{ color: COLORS.gold }}>{PHONE}</span><br /><span style={{ color: COLORS.gold }}>{EMAIL}</span>
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 16 }}>
               {LICENSES.map(l => (
@@ -464,15 +464,10 @@ function HomePage({ setPage }) {
             }}>Electrical Contractor</span>
           </div>
 
-          <h1 style={{
-            fontFamily: "'Lora', Georgia, serif",
-            fontSize: "clamp(30px, 4.5vw, 48px)", fontWeight: 700,
-            color: COLORS.white, lineHeight: 1.15, margin: "0 0 10px",
-          }}>Uncompromised Quality.</h1>
           <p style={{
             fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 2vw, 20px)", fontWeight: 600,
-            letterSpacing: 4, textTransform: "uppercase", color: COLORS.white, margin: "0 0 44px",
-          }}>Peerless Service</p>
+            letterSpacing: 4, textTransform: "uppercase", color: COLORS.gold, margin: "0 0 44px",
+          }}>Uncompromised Quality</p>
 
           <div className="hero-buttons" style={{ display: "flex", gap: 20, justifyContent: "center", flexWrap: "wrap" }}>
             <GoldButton large onClick={() => setPage("request-service")}>Request a Consultation</GoldButton>
