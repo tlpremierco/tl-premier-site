@@ -97,17 +97,17 @@ function Navigation({ currentPage, setPage }) {
           <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "nowrap", justifyContent: "flex-end" }} className="desktop-nav">
             {navItems.filter(n => n.id !== "home").map(item => (
               <button key={item.id} onClick={() => setPage(item.id)} style={{
-                background: "none", border: "none", cursor: "pointer",
+                background: "linear-gradient(180deg, #E8C877 0%, #C9A24B 45%, #9C7A2E 75%, #E0BE6A 100%)",
+                WebkitBackgroundClip: "text", backgroundClip: "text",
+                WebkitTextFillColor: "transparent", color: "transparent",
+                border: "none", cursor: "pointer",
                 fontFamily: "'Lora', Georgia, serif", fontSize: 15, fontWeight: 700,
-                color: COLORS.gold,
                 letterSpacing: 0.3,
                 padding: "12px 0", borderBottom: currentPage === item.id ? `4px solid ${COLORS.gold}` : "4px solid transparent",
                 transition: "all 0.3s",
                 opacity: 1,
                 whiteSpace: "nowrap",
               }}
-                onMouseEnter={e => { e.target.style.color = COLORS.goldDark; }}
-                onMouseLeave={e => { e.target.style.color = COLORS.gold; }}
               >{item.label}</button>
             ))}
           </div>
@@ -807,7 +807,7 @@ function ServicePage({ title, subtitle, license, services, description, setPage,
             color: COLORS.grayDark, lineHeight: 2, maxWidth: 800, marginBottom: 60,
           }}>{description}</div>
 
-          <SectionTitle eyebrow="Our Services" title={`${title} Services`} center={false} />
+          <SectionTitle eyebrow="Our Services" title={title.endsWith("Services") ? title : `${title} Services`} center={false} />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
             {services.map(s => (
               <div key={s.title} style={{
