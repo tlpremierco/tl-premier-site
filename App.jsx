@@ -23,7 +23,7 @@ const COLORS = {
   goldDark: "#A8862F",
   black: "#0A0A0A",
   white: "#FFFFFF",
-  offWhite: "#FAF5EC",
+  offWhite: "#FFFFFF",
   gray: "#4A4A4A",
   grayLight: "#D1D1D1",
   grayDark: "#2A2A2A",
@@ -97,11 +97,12 @@ function Navigation({ currentPage, setPage }) {
           <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "nowrap", justifyContent: "flex-end" }} className="desktop-nav">
             {navItems.filter(n => n.id !== "home").map(item => (
               <button key={item.id} onClick={() => setPage(item.id)} style={{
-                background: "linear-gradient(180deg, #E8C877 0%, #C9A24B 45%, #9C7A2E 75%, #E0BE6A 100%)",
+                background: "linear-gradient(180deg, #F0D488 0%, #C9A24B 45%, #9C7A2E 72%, #E8C877 100%)",
                 WebkitBackgroundClip: "text", backgroundClip: "text",
                 WebkitTextFillColor: "transparent", color: "transparent",
+                WebkitTextStroke: "0.4px rgba(0,0,0,0.55)",
                 border: "none", cursor: "pointer",
-                fontFamily: "'Lora', Georgia, serif", fontSize: 15, fontWeight: 700,
+                fontFamily: "'Lora', Georgia, serif", fontSize: 15, fontWeight: 800,
                 letterSpacing: 0.3,
                 padding: "12px 0", borderBottom: currentPage === item.id ? `4px solid ${COLORS.gold}` : "4px solid transparent",
                 transition: "all 0.3s",
@@ -483,7 +484,7 @@ function HomePage({ setPage }) {
       </div>
 
       {/* Trust Section - New to Naples */}
-      <div style={{ padding: "90px 40px", background: "#FAF5EC" }}>
+      <div style={{ padding: "90px 40px", background: "#FFFFFF" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div style={{ width: 50, height: 2, background: COLORS.gold, margin: "0 auto 20px" }} />
           <h2 style={{
@@ -633,7 +634,7 @@ function AboutPage({ setPage }) {
     <div>
       <PageHero title="Meet Nathan Le" subtitle="Founder & CEO — 4th Generation Builder" />
 
-      <div style={{ padding: "80px 40px", background: "#FAF5EC" }}>
+      <div style={{ padding: "80px 40px", background: "#FFFFFF" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
 
           {/* Photo + Card floated left, bio wraps around */}
@@ -707,7 +708,7 @@ function AboutPage({ setPage }) {
       </div>
 
       {/* Licenses & Credentials */}
-      <div style={{ padding: "80px 40px", background: "#FAF5EC" }}>
+      <div style={{ padding: "80px 40px", background: "#FFFFFF" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <SectionTitle eyebrow="Credentials" title="Licenses & Credentials" />
 
@@ -797,7 +798,7 @@ function ServicePage({ title, subtitle, license, services, description, setPage,
   return (
     <div>
       <PageHero title={title} subtitle={subtitle} />
-      <div style={{ padding: "80px 40px", background: "#FAF5EC", minHeight: 400 }}>
+      <div style={{ padding: "80px 40px", background: "#FFFFFF", minHeight: 400 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 40 }}>
             <LicenseBadge license={license} />
@@ -952,7 +953,7 @@ function PortfolioPage({ setPage }) {
   return (
     <div>
       <PageHero title="Our Work" subtitle="20+ years of craftsmanship — from San Diego to Naples" />
-      <div style={{ padding: "80px 40px", background: "#FAF5EC" }}>
+      <div style={{ padding: "80px 40px", background: "#FFFFFF" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <SectionTitle
             eyebrow="Portfolio"
@@ -1151,7 +1152,7 @@ function CareersPage() {
   return (
     <div>
       <PageHero title="Join Our Team" subtitle="Build your career with one of Naples' premier construction companies" />
-      <div style={{ padding: "80px 40px", background: "#FAF5EC" }}>
+      <div style={{ padding: "80px 40px", background: "#FFFFFF" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
 
           {/* Why Work With Us */}
@@ -1604,7 +1605,7 @@ function SEOServicePage({ pageKey, setPage }) {
   return (
     <div>
       <PageHero title={d.h1} subtitle="Naples • Marco Island • Bonita Springs • Estero • Collier County" />
-      <div style={{ padding: "72px 40px", background: "#FAF5EC" }}>
+      <div style={{ padding: "72px 40px", background: "#FFFFFF" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
           <div style={{ marginBottom: 32, display: "flex", gap: 12, flexWrap: "wrap" }}>
             {LICENSES.map(l => <LicenseBadge key={l.number} license={l} />)}
@@ -1680,7 +1681,7 @@ function ServicesIndexPage({ setPage }) {
   return (
     <div>
       <PageHero title="Our Services" subtitle="Premium home services across Naples, Marco Island, Bonita Springs & Collier County" />
-      <div style={{ padding: "80px 40px", background: "#FAF5EC" }}>
+      <div style={{ padding: "80px 40px", background: "#FFFFFF" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 400, color: COLORS.grayDark, lineHeight: 1.9, maxWidth: 760, marginBottom: 48 }}>
             TL Premier Construction Services is a licensed Florida general contractor, plumbing contractor, and electrical contractor serving luxury homes throughout Naples and Collier County. Explore our specialized services below.
