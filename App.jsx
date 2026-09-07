@@ -97,18 +97,18 @@ function Navigation({ currentPage, setPage }) {
           <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "nowrap", justifyContent: "flex-end" }} className="desktop-nav">
             {navItems.filter(n => n.id !== "home").map(item => (
               <button key={item.id} onClick={() => setPage(item.id)} style={{
-                background: "linear-gradient(180deg, #F0D488 0%, #C9A24B 45%, #9C7A2E 72%, #E8C877 100%)",
-                WebkitBackgroundClip: "text", backgroundClip: "text",
-                WebkitTextFillColor: "transparent", color: "transparent",
-                WebkitTextStroke: "0.4px rgba(0,0,0,0.55)",
+                background: "none",
                 border: "none", cursor: "pointer",
-                fontFamily: "'Lora', Georgia, serif", fontSize: 15, fontWeight: 900,
-                letterSpacing: 0.3,
-                padding: "12px 0", borderBottom: currentPage === item.id ? `4px solid ${COLORS.gold}` : "4px solid transparent",
+                color: currentPage === item.id ? COLORS.gold : COLORS.navy,
+                fontFamily: "'Playfair Display', Georgia, serif", fontSize: 18, fontWeight: 500,
+                fontStyle: "italic", letterSpacing: 0.3,
+                padding: "12px 0", borderBottom: currentPage === item.id ? `3px solid ${COLORS.gold}` : "3px solid transparent",
                 transition: "all 0.3s",
                 opacity: 1,
                 whiteSpace: "nowrap",
               }}
+                onMouseEnter={e => { e.target.style.color = COLORS.gold; }}
+                onMouseLeave={e => { e.target.style.color = currentPage === item.id ? COLORS.gold : COLORS.navy; }}
               >{item.label}</button>
             ))}
           </div>
@@ -422,13 +422,13 @@ function HomePage({ setPage }) {
     <div>
       {/* Hero */}
       <div style={{
-        minHeight: "100vh", display: "flex", alignItems: "center",
-        position: "relative", overflow: "hidden", padding: "140px 24px 80px",
+        display: "flex", alignItems: "center",
+        position: "relative", overflow: "hidden", padding: "150px 24px 90px",
       }} className="hero-section">
         {/* Background image */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: `linear-gradient(90deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.75) 40%, rgba(10,10,10,0.35) 100%), url(${VAN_PHOTO})`,
+          backgroundImage: `linear-gradient(90deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.78) 42%, rgba(10,10,10,0.5) 100%), url(${VAN_PHOTO})`,
           backgroundSize: "cover", backgroundPosition: "center right",
         }} />
 
@@ -436,21 +436,21 @@ function HomePage({ setPage }) {
           <div style={{ maxWidth: 760 }}>
             <p className="hero-eyebrow" style={{
               fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.6vw, 15px)", fontWeight: 700,
-              letterSpacing: 4, textTransform: "uppercase", color: COLORS.gold, marginBottom: 28, lineHeight: 1.5,
+              letterSpacing: 4, textTransform: "uppercase", color: COLORS.gold, marginBottom: 24, lineHeight: 1.5,
             }}>Naples, Florida &amp; The Surrounding Coast</p>
 
             <h1 style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              fontSize: "clamp(48px, 9vw, 104px)", fontWeight: 500,
-              color: COLORS.white, lineHeight: 1.02, margin: "0 0 8px", letterSpacing: "-0.5px",
+              fontSize: "clamp(44px, 7vw, 82px)", fontWeight: 500,
+              color: COLORS.white, lineHeight: 1.05, margin: "0 0 8px", letterSpacing: "-0.5px",
             }}>
-              Exceptional homes.<br />
-              <span style={{ fontStyle: "italic", fontWeight: 500, color: COLORS.offWhite }}>Expertly cared for.</span>
+              Uncompromised<br />
+              <span style={{ fontStyle: "italic", fontWeight: 500, color: COLORS.offWhite }}>Quality.</span>
             </h1>
 
             <p style={{
-              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(16px, 2vw, 21px)", fontWeight: 400,
-              color: "rgba(255,255,255,0.9)", lineHeight: 1.85, margin: "36px 0 44px", maxWidth: 620,
+              fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(15px, 2vw, 20px)", fontWeight: 400,
+              color: "rgba(255,255,255,0.9)", lineHeight: 1.85, margin: "32px 0 40px", maxWidth: 600,
             }}>
               Luxury renovations. Custom construction. Essential systems. One accountable team, from the first conversation to the final walkthrough.
             </p>
@@ -465,15 +465,11 @@ function HomePage({ setPage }) {
               }}>Explore our expertise <span style={{ color: COLORS.gold }}>&#8595;</span></button>
             </div>
 
-            <div style={{ marginTop: 64, paddingTop: 28, borderTop: `1px solid rgba(255,255,255,0.15)`, maxWidth: 620 }}>
+            <div style={{ marginTop: 56, paddingTop: 26, borderTop: `1px solid rgba(255,255,255,0.15)`, maxWidth: 600 }}>
               <p style={{
-                fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700,
-                letterSpacing: 3, textTransform: "uppercase", color: COLORS.gold, margin: "0 0 10px",
-              }}>Quality Uncompromised.</p>
-              <p style={{
-                fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(12px, 1.5vw, 15px)", fontWeight: 600,
-                letterSpacing: 2, textTransform: "uppercase", color: "rgba(255,255,255,0.8)", margin: 0,
-              }}>General Contracting &nbsp;&middot;&nbsp; Plumbing &nbsp;&middot;&nbsp; Electrical</p>
+                fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(11px, 1.5vw, 14px)", fontWeight: 700,
+                letterSpacing: 2, textTransform: "uppercase", color: "rgba(255,255,255,0.85)", margin: 0,
+              }}>General Contractor &nbsp;&middot;&nbsp; Plumbing Contractor &nbsp;&middot;&nbsp; Electrical Contractor</p>
             </div>
           </div>
         </div>
